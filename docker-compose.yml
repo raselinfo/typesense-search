@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  typesense:
+    image: typesense/typesense:0.24.1
+    ports:
+      - "8108:8108"
+    command: "command: --data-dir /data --api-key=YourApiKeyHere"
+    volumes:
+      - ./typesense-data:/data
+
+volumes:
+  typesense-data:
